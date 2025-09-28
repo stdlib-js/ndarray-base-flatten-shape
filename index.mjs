@@ -1,4 +1,0 @@
-// Copyright (c) 2025 The Stdlib Authors. License is Apache-2.0: http://www.apache.org/licenses/LICENSE-2.0
-/// <reference types="./index.d.ts" />
-import s from"https://cdn.jsdelivr.net/gh/stdlib-js/utils-define-nonenumerable-read-only-property@v0.2.1-esm/index.mjs";import e from"https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-fast-min@v0.3.0-esm/index.mjs";import t from"https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-fast-max@v0.3.0-esm/index.mjs";import n from"https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zeros@v0.2.2-esm/index.mjs";function r(s,t,n){var r,i,a,m,d;for(r=s.length,i=e(r-1,t),a=1,d=0,m=0;m<r;m++)m<=i?(a*=s[m],m===i&&(n[d]=a,d+=1)):(n[d]=s[m],d+=1);return n}function i(s,i){var a=s.length,m=n(a-t(e(a-1,i),0));return r(s,i,m),m}s(i,"assign",r);export{r as assign,i as default};
-//# sourceMappingURL=index.mjs.map
