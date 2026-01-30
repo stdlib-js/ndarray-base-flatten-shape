@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/ndarray-base-flatten-shape",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Flatten a shape to a specified depth.",
   "license": "Apache-2.0",
   "author": {
@@ -44,12 +44,12 @@
     "@stdlib/math-base-special-fast-min": "^0.3.0",
     "@stdlib/types": "^0.4.3",
     "@stdlib/utils-define-nonenumerable-read-only-property": "^0.2.2",
-    "@stdlib/utils-library-manifest": "^0.2.2"
+    "@stdlib/utils-library-manifest": "^0.2.3"
   },
   "devDependencies": {
     "@stdlib/array-base-zip": "github:stdlib-js/array-base-zip#main",
     "@stdlib/assert-is-array": "^0.2.2",
-    "@stdlib/console-log-each-map": "github:stdlib-js/console-log-each-map#main",
+    "@stdlib/console-log-each-map": "^0.1.0",
     "@stdlib/random-array-discrete-uniform": "^0.2.1",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
     "istanbul": "^0.4.1",
@@ -87,7 +87,6 @@
     "utils",
     "util"
   ],
-  "__stdlib__": {},
   "funding": {
     "type": "opencollective",
     "url": "https://opencollective.com/stdlib"
