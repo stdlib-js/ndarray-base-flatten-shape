@@ -45,32 +45,20 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/ndarray-base-flatten-shape
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var flattenShape = require( '@stdlib/ndarray-base-flatten-shape' );
+import flattenShape from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-flatten-shape@deno/mod.js';
+```
+
+You can also import the following named exports from the package:
+
+```javascript
+import { assign } from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-flatten-shape@deno/mod.js';
 ```
 
 #### flattenShape( shape, depth )
@@ -128,10 +116,10 @@ The function accepts the following parameters:
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
-var zip = require( '@stdlib/array-base-zip' );
-var logEachMap = require( '@stdlib/console-log-each-map' );
-var flattenShape = require( '@stdlib/ndarray-base-flatten-shape' );
+import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@deno/mod.js';
+import zip from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zip@deno/mod.js';
+import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@deno/mod.js';
+import flattenShape from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-flatten-shape@deno/mod.js';
 
 var opts = {
     'dtype': 'int32'
@@ -153,103 +141,7 @@ logEachMap( 'shape: (%s). depth: %d. flattened: (%s).', shapes, depths, flattenS
 
 <!-- C interface documentation. -->
 
-* * *
 
-<section class="c">
-
-## C APIs
-
-<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
-
-<section class="intro">
-
-</section>
-
-<!-- /.intro -->
-
-<!-- C usage documentation. -->
-
-<section class="usage">
-
-### Usage
-
-```c
-#include "stdlib/ndarray/base/flatten_shape.h"
-```
-
-#### stdlib_ndarray_flatten_shape( ndims, \*shape, depth, \*out )
-
-Flattens a shape to a specified depth.
-
-```c
-const int64_t ndims = 3;
-const int64_t shape[] = { 2, 3, 10 };
-int64_t out[ 1 ];
-
-stdlib_ndarray_flatten_shape( ndims, shape, 2, out );
-```
-
-The function accepts the following arguments:
-
--   **ndims**: `[in] int64_t` number of dimensions.
--   **shape**: `[in] int64_t*` array shape (dimensions).
--   **depth**: `[in] int64_t` maximum depth to flatten.
--   **out**: `[out] int64_t*` output array.
-
-```c
-int8_t stdlib_ndarray_flatten_shape( const int64_t ndims, const int64_t *shape, const int64_t depth, int64_t *out );
-```
-
-</section>
-
-<!-- /.usage -->
-
-<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="notes">
-
-</section>
-
-<!-- /.notes -->
-
-<!-- C API usage examples. -->
-
-<section class="examples">
-
-### Examples
-
-```c
-#include "stdlib/ndarray/base/flatten_shape.h"
-#include <stdio.h>
-#include <inttypes.h>
-
-int main( void ) {
-    const int64_t shape[] = { 2, 3, 4, 10 };
-    const int64_t ndims = 4;
-    const int64_t depth = 2;
-    int64_t out[ 2 ];
-
-    stdlib_ndarray_flatten_shape( ndims, shape, depth, out );
-
-    int i;
-    printf( "shape = ( " );
-    for ( i = 0; i < ndims-depth; i++ ) {
-        printf( "%"PRId64"", out[ i ] );
-        if ( i < ndims-depth-1 ) {
-            printf( ", " );
-        }
-    }
-    printf( " )\n" );
-}
-```
-
-</section>
-
-<!-- /.examples -->
-
-</section>
-
-<!-- /.c -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
@@ -276,7 +168,7 @@ int main( void ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
