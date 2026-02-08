@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2025 The Stdlib Authors.
@@ -16,24 +16,18 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
 
-var min = require( '@stdlib/math-base-special-fast-min' );
-var max = require( '@stdlib/math-base-special-fast-max' );
-var zeros = require( '@stdlib/array-base-zeros' );
-var assign = require( './assign.js' );
-
-
-// MAIN //
+import { Collection } from '@stdlib/types/array';
 
 /**
 * Flattens a shape to a specified depth.
 *
-* @param {NonNegativeIntegerArray} shape - array shape
-* @param {NonNegativeInteger} depth - maximum depth to flatten
-* @returns {NonNegativeIntegerArray} flattened shape
+* @param shape - array shape
+* @param depth - maximum depth to flatten
+* @returns flattened shape
 *
 * @example
 * var sh = flattenShape( [ 3, 2 ], 1 );
@@ -54,14 +48,9 @@ var assign = require( './assign.js' );
 * sh = flattenShape( [], 1 );
 * // returns []
 */
-function flattenShape( shape, depth ) {
-	var ndims = shape.length;
-	var out = zeros( ndims-max( min( ndims-1, depth ), 0 ) );
-	assign( shape, depth, out );
-	return out;
-}
+declare function flattenShape( shape: Collection<number>, depth: number ): Array<number>;
 
 
 // EXPORTS //
 
-module.exports = flattenShape;
+export = flattenShape;
